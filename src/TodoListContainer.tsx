@@ -11,7 +11,6 @@ const mapDispatchToProps= (dispatch:any) =>{
     return {
         loadTodos:dispatch(getAlltodos()),
         onDelete: (todo:Todo) => dispatch(deleteTodo(todo))
-
     }
 }
 

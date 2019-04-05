@@ -1,7 +1,5 @@
 import { Todo } from "../Todo";
 
-
-
 export function getAlltodos(){
     return async (dispatch:any) =>{
       const response = await fetch('http://localhost:3004/todos');
