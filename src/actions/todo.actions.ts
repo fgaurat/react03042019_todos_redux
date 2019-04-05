@@ -1,3 +1,4 @@
+import { Todo } from "../Todo";
 
 
 
@@ -12,3 +13,11 @@ export function getAlltodos(){
       dispatch(action);
     }
   }
+
+  export function deleteTodo(todo:Todo){
+    return async (dispatch:any) =>{
+        const url_delete = `http://localhost:3004/todos/${todo.id}`;
+        await fetch(url_delete,{method:'DELETE'});
+        dispatch(getAlltodos())
+    }
+}
