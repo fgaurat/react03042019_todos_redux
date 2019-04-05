@@ -2,7 +2,7 @@
 
 
 export function getAlltodos(){
-    return async (dispatch) =>{
+    return async (dispatch:any) =>{
       const response = await fetch('http://localhost:3004/todos');
       const todos = await response.json();
       const action = {
